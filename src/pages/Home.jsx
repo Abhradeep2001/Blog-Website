@@ -49,6 +49,7 @@ export const Home=()=>{
                 <h2> {post.title}</h2>
               </div>
               <div className="deletePost">
+                {/* //Users can only delete their own created post */}
                 {userInfo && post.author.id === userInfo?.uid && (
                   <button
                     onClick={() => {
